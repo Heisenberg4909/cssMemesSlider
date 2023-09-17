@@ -1,0 +1,149 @@
+body {
+    background: linear-gradient(to right bottom, blue, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.slider {
+    max-width: 800px;
+    overflow-x: hidden;
+    height: auto;
+    margin: auto;
+    position: relative;
+    padding-bottom: 50px;
+
+}
+
+
+
+.slides {
+    width: 400%;
+    margin: 0;
+    height: 400px;
+    display: flex;
+}
+
+.inputs {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+
+.slide {
+    background-color: rgb(77, 80, 80);
+    display: flex;
+    width: 25%;
+    flex-shrink: 0;
+    /* position: relative; */
+
+}
+
+.slide img {
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    z-index: 3;
+    right: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__dots{
+    padding: 10px;
+}
+
+.dot {
+
+    display: flex;
+    border: 2px solid aliceblue;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: aliceblue;
+}
+
+.navigation__dots:hover {
+    opacity: 0.6;
+}
+
+
+
+.description {
+    display: flex;
+    width: 400%;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.description p {
+    width: 25%;
+    flex-shrink: 0;
+    font-size: 18px;
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.inputs:has(#mem1:checked)~.s1{
+    margin-left: -20px;
+    transition: margin-left 0.5s;
+}
+
+.inputs:has(#mem2:checked)~.s1{
+    margin-left: -27.2%;
+    transition: margin-left 0.5s;
+}
+
+.inputs:has(#mem3:checked)~.s1 {
+    margin-left: -52.2%;
+    transition: margin-left 0.5s;
+}
+
+.inputs:has(#mem4:checked)~.s1 {
+    margin-left: -77.2%;
+    transition: margin-left 0.5s;
+}
+
+.inputs:has(#mem1:checked) ~ .navigation .dot1 {
+    background-color: transparent;
+}
+.inputs:has(#mem2:checked) ~ .navigation .dot2 {
+    background-color: transparent;
+}
+.inputs:has(#mem3:checked) ~ .navigation .dot3 {
+    background-color: transparent;
+}
+.inputs:has(#mem4:checked) ~ .navigation .dot4 {
+    background-color: transparent;
+}
+
+.inputs:has(#mem1:checked) ~ .description  {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+}
+.inputs:has(#mem2:checked) ~ .description  {
+    margin-left: -100%;
+    transition: margin-left 0.5s;
+}
+.inputs:has(#mem3:checked) ~ .description  {
+    margin-left: -200%;
+    transition: margin-left 0.5s;
+}
+.inputs:has(#mem4:checked) ~ .description  {
+    margin-left: -300%;
+    transition: margin-left 0.5s;
+}
